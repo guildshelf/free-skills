@@ -1,0 +1,21 @@
+' startup.vbs.example — template for shell:startup (runs at login, no visible window)
+'
+' HOW TO USE:
+'   1. Copy this file, rename it to something like  my-startup.vbs
+'   2. Edit the CurrentDirectory and the Run command below.
+'   3. Press Win+R, type  shell:startup  , press Enter.
+'   4. Drop your .vbs into that folder. NEVER put a .bat there directly.
+'
+' The window style 0 = the window is never shown; False = do not wait (the VBS exits immediately
+' and your program keeps running in the background).
+
+Dim objShell
+Set objShell = CreateObject("WScript.Shell")
+
+' --- edit these two lines ---
+objShell.CurrentDirectory = "C:\path\to\your\project"
+objShell.Run "cmd /c your-script.bat", 0, False
+
+' Examples of other things you might launch in the background instead:
+'   objShell.Run """C:\path\to\pythonw.exe"" ""C:\path\to\your\script.py""", 0, False
+'   objShell.Run "cmd /c node server.js", 0, False

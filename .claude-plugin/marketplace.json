@@ -1,0 +1,20 @@
+{
+  "name": "free",
+  "owner": {
+    "name": "Guildshelf"
+  },
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "guildshelf-free",
+      "source": "guildshelf-free",
+      "description": "Guildshelf free funnel skills \u2014 Apache-2.0.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Guildshelf"
+      }
+    }
+  ]
+}

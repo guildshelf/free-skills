@@ -1,0 +1,24 @@
+:: background-launch.bat.example — launch child processes from a .bat with no window.
+::
+:: HOW TO USE:
+::   1. Copy this file, rename it to  my-launch.bat
+::   2. Replace the placeholder paths and commands below.
+::   3. If this runs at login, DO NOT put the .bat in the startup folder —
+::      wrap it with startup.vbs.example instead (see that file).
+::
+:: Rule: never use  start /min  (it leaves a minimized window on the taskbar).
+:: Use PowerShell Start-Process -WindowStyle Hidden so the child gets no window at all.
+
+@echo off
+cd /d "C:\path\to\your\project"
+
+:: --- launch a Node server in the background (no window) ---
+powershell -WindowStyle Hidden -NoProfile -Command "Start-Process 'node' -ArgumentList 'server.js' -WindowStyle Hidden"
+
+:: --- launch a tunnel with arguments, in the background (no window) ---
+powershell -WindowStyle Hidden -NoProfile -Command "Start-Process 'cloudflared' -ArgumentList 'tunnel','--url','http://localhost:8080' -WindowStyle Hidden"
+
+:: --- launch a Python service with the windowless interpreter ---
+pythonw.exe worker.py
+
+:: No  pause  at the end — pause would leave a zombie cmd.exe waiting forever.
