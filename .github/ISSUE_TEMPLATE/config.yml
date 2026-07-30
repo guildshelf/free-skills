@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Guildshelf — what the paid library is
+    url: https://guildshelf.github.io/
+    about: Pricing, the four commitments, and what each skill line covers.
+  - name: Install the five free skills
+    url: https://github.com/guildshelf/free-skills#install
+    about: One command in Claude Code. Apache-2.0, runs on your own accounts.
