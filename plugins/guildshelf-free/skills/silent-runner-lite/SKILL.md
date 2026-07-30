@@ -141,7 +141,7 @@ proc = subprocess.Popen(
 - **Not for concealment.** These patterns quiet legitimate background
   processes for the machine's own user. They must not be used to hide
   software from antivirus, EDR, Task Manager, or any security control.
-- **No outcome guarantees.** These are tools; they do not promise unattended
+- **No promised outcomes.** These are tools; they do not promise unattended
   operation.
 - **Antivirus note.** Window-management techniques like these are commonly
   flagged by antivirus heuristics (a VBS spawning `cmd.exe` is a classic
