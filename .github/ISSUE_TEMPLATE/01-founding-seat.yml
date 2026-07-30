@@ -1,0 +1,69 @@
+name: "Reserve a founding seat"
+description: "Lock the founding rate before the checkout opens. No payment now, no obligation."
+title: "Founding seat: "
+labels: ["founding-seat"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Read this first.** The checkout is not open yet. This thread is how you
+        hold a founding rate until it is. When it opens we reply here with a
+        payment link, and you decide then — nothing is owed for reserving.
+
+        Founding rates, and what they are anchored to:
+
+        | | Price | Cap | Compared to |
+        |---|---|---|---|
+        | **Founding Annual** | US$199 / year, held at that rate | first 150 | list price US$290 / year |
+        | **Founding Lifetime** | US$499 once | first 50 | ~1.7 years of list |
+        | Pro (list) | US$29 / month or US$290 / year | — | — |
+        | Team (list) | US$99 / month, 5 seats | — | — |
+
+        Please do **not** post your email address here — this issue is public.
+        GitHub notifies you of replies in this thread, which is all we need.
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Which rate are you holding?
+      options:
+        - "Founding Annual — US$199/year, held"
+        - "Founding Lifetime — US$499 once"
+        - "Team — US$99/month, 5 seats"
+        - "Not sure yet, tell me more"
+    validations:
+      required: true
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Are you running Claude Code today?
+      description: "The skills are files in your own environment. They need an agent that reads the Agent Skills format."
+      options:
+        - "Yes, daily"
+        - "Yes, occasionally"
+        - "Not yet, evaluating"
+        - "I use a different agent"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is currently costing you the most time?
+      description: "One or two sentences. This is the single most useful thing you can tell us — it decides what gets built next."
+      placeholder: "A background job dies overnight and I find out the next morning."
+    validations:
+      required: true
+  - type: checkboxes
+    id: lines
+    attributes:
+      label: Which lines matter to you?
+      options:
+        - label: "TRUST — pin skill versions, measure whether a skill fires, screen claims before they enter memory, catch secrets and dead config"
+        - label: "OPS — restart crashed and stuck jobs, deliver alerts with dedup, verify DNS/ports/health/certs before a launch, stop concurrent agents colliding"
+        - label: "DATA — a human yes between what an agent extracted and your database, and upstream mirroring that refuses a truncated sync"
+  - type: checkboxes
+    id: ack
+    attributes:
+      label: Understood
+      options:
+        - label: "I understand the checkout is not open yet and this reserves a rate, not a purchase."
+          required: true
