@@ -9,6 +9,21 @@ They run in *your* environment on *your* accounts — we never see your keys or 
 /plugin marketplace add guildshelf/free-skills
 ```
 
+## Also free: the tool we measured ourselves with
+
+**[`tools/trigger-probe`](tools/trigger-probe/)** — one Python file, Apache-2.0, no
+dependencies. Point it at a cases file and it tells you whether your skill actually
+loads: fresh session per case, whole plugin installed, prompt passed through verbatim.
+
+```bash
+python tools/trigger-probe/trigger_probe.py cases.md --slug my-skill     --plugin-dir path/to/plugins/my-plugin --card scorecard.md
+```
+
+It is the tool that produced [EVAL-REPORT.md](EVAL-REPORT.md), including the eight of
+our own skills that failed. Its README documents the three things that changed our
+numbers — the working directory matters, one 20-case run cannot resolve a 90% bar, and
+a sibling skill winning is often correct rather than a failure.
+
 ## What's inside
 
 | Skill | What it does |
