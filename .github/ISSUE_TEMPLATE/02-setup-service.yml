@@ -1,0 +1,87 @@
+name: "Done-with-you setup (US$399)"
+description: "We get Claude Code running your workflow, and build one skill to your spec."
+title: "Setup: "
+labels: ["done-with-you"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **What you get, US$399, one time:**
+
+        1. **Guided setup.** A working thread where we get the library installed and
+           configured against your actual environment — you run the commands, we read
+           the output and tell you the next one. Windows, macOS or Linux.
+        2. **One skill built to your spec.** Not a template. You describe the job you
+           keep doing by hand; we write the SKILL.md, the script, the trigger cases and
+           the tests, and hand you the package. You own it outright, no licence attached.
+        3. **A runbook.** Written for the person who has to fix it at 2am, which is
+           usually you.
+
+        **Turnaround:** the custom skill inside 5 working days of the spec being
+        agreed. Setup starts the same day you open this.
+
+        **Capacity is real and small:** 3 this week, 10 total before the price moves.
+        We would rather deliver three properly than sell thirty.
+
+        **Two honest notes.** The checkout is not open yet, so we agree the scope in
+        this thread first and invoice when it opens — you pay nothing before you know
+        exactly what you are getting. And this is delivered in writing, async, which
+        for most engineers beats a call; if you specifically want a live call instead,
+        say so below and we will arrange one.
+
+        Please do **not** post your email address, keys, tokens, config files or
+        logs here — this issue is public. We will move to a private channel before
+        anything sensitive is needed.
+  - type: input
+    id: job
+    attributes:
+      label: What job do you want automated?
+      description: "One line. The thing you do by hand often enough to resent."
+      placeholder: "Every morning I check six services are up and post a summary to Slack."
+    validations:
+      required: true
+  - type: textarea
+    id: today
+    attributes:
+      label: How does it work today?
+      description: "What you click, what you run, what breaks. Rough notes are fine — no config contents, no credentials."
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Where will it run?
+      options:
+        - "Windows"
+        - "macOS"
+        - "Linux"
+        - "A server / container"
+        - "Not decided"
+    validations:
+      required: true
+  - type: dropdown
+    id: state
+    attributes:
+      label: Claude Code status
+      options:
+        - "Installed and I use it"
+        - "Installed, barely used"
+        - "Not installed yet"
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: How do you want it delivered?
+      options:
+        - "Async, in writing (default, fastest)"
+        - "I would rather have a live call"
+    validations:
+      required: true
+  - type: checkboxes
+    id: ack
+    attributes:
+      label: Understood
+      options:
+        - label: "I understand scope is agreed in this thread before any invoice, and that I will not post credentials or config contents in a public issue."
+          required: true
