@@ -33,6 +33,11 @@ Here is everything, including the eight that failed.
 **Library totals: trigger 144/180 (80.0%). Restraint 180/180 (100%). Ten skills
 clear our 90% bar, eight do not.**
 
+Machine-readable, and the measurement output itself rather than a transcription of it,
+so it cannot drift from the table above:
+**[`data/trigger-rates.json`](data/trigger-rates.json)** — per-skill counts, the method,
+and the caveats in fields you can assert against.
+
 The pass bar is ours and it is deliberately hard: 90% on each side, so one miss in
 ten is a fail. We are publishing eight fails rather than moving the bar to nine.
 
