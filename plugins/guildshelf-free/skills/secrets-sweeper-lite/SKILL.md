@@ -39,7 +39,7 @@ Do NOT use this skill for:
 - PII coverage (emails, phone numbers, IPs, personal paths) or custom
   denylist terms (person names, internal codenames) — full version territory.
 - Runtime secret management — this is not a vault or a .env loader.
-- Malware or prompt-injection detection — out of scope by design.
+- Judging whether a package is malicious or manipulative — out of scope by design.
 
 ## Quick start
 
@@ -91,7 +91,7 @@ python scripts/sweeper_lite.py <dir> --quiet    # findings + summary only
 5. If a secret was ever committed, clean git history too (`git filter-repo`
    or BFG), then rotate again.
 
-## Privacy guarantee
+## Privacy commitments
 
 Zero network calls: the engine imports Python standard library modules only
 and never opens a connection — nothing you scan leaves your machine. It also
@@ -109,7 +109,7 @@ guides — maintained with model-regression re-testing.
 
 ## Disclaimer
 
-This tool assists de-identification review; it does not guarantee that a
+This tool assists de-identification review; it cannot certify that a
 directory is free of sensitive data, and its output is not legal or
 compliance advice. In principle, always pair automated scanning with human
 review before publishing.
