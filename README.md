@@ -38,6 +38,18 @@ re-verified within 48h of every model update**.
 Every skill ships with its own tests, an eval case set, a changelog, and an
 honest list of what it does **not** do.
 
+## Does any of this actually fire?
+
+We measured all 18 paid skills: 20 trigger cases each, 360 cases, one fresh session
+per case, the whole library installed the way a customer installs it.
+
+**Trigger 144/180. Restraint 180/180 — not one skill fired on a prompt built to bait
+it. Ten skills clear our 90% bar and eight do not, the worst at 3/10.**
+
+All eight failures are published, with the fixes that did not work, plus a pattern we
+published from the first five skills and then retracted when the other thirteen
+refuted it. → **[EVAL-REPORT.md](EVAL-REPORT.md)**
+
 ## Pricing
 
 | | Price | Cap |
