@@ -196,10 +196,22 @@ person types rather than how the model chooses. It is a recommendation, not a re
 
 ## Reproduce it
 
-The runner and every case file ship inside the paid library. The five free skills
-here carry their own case sets too. If you write skills, the useful move is not to
-trust our numbers — it is to measure yours, in a directory that looks like your
-users' directory, more than once.
+**The runner is now free and open-source:**
+[`tools/trigger-probe`](tools/trigger-probe/) — one file, Apache-2.0, standard library
+only. It reads the same cases-file format used throughout this library, installs a
+whole plugin for the run, and writes the scorecard you see in every skill directory.
+
+```bash
+python tools/trigger-probe/trigger_probe.py cases.md --slug my-skill     --plugin-dir path/to/plugins/my-plugin     --lab ~/work/a-realistic-project --card scorecard.md
+```
+
+We published the method before we published the tool, so anyone could have rebuilt it
+in an afternoon. Giving away the measuring tape costs us nothing and makes every number
+above checkable, which is the only thing that makes them worth reading.
+
+The five free skills in this repo carry their own case sets too, so there is something
+to point it at before you buy anything. If you write skills, do not trust our numbers —
+measure yours, in a directory that looks like your users' directory, more than once.
 
 ---
 
