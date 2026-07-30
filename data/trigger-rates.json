@@ -1,0 +1,275 @@
+{
+  "$comment": "Machine-readable trigger-eval results for the Guildshelf paid library. This file is the measurement output itself, not a transcription of it, so it cannot drift from the numbers we publish elsewhere. Regenerated whenever the library is re-measured.",
+  "measured_on": "2026-07-30",
+  "model": "claude-sonnet-5",
+  "runner": "trigger-probe (Apache-2.0): https://github.com/guildshelf/free-skills/tree/main/tools/trigger-probe",
+  "report": "https://github.com/guildshelf/free-skills/blob/main/EVAL-REPORT.md",
+  "method": {
+    "cases_per_skill": 20,
+    "positive_cases": 10,
+    "negative_cases": 10,
+    "session": "one fresh headless process per case, no session persistence",
+    "library": "all 18 paid skills installed together as one plugin, so every sibling competes",
+    "working_directory": "a small neutral service project - source files, a config, a log, a .claude directory holding one unrelated local skill",
+    "fired_definition": "the model called the Skill tool for the skill under test at any point in the turn",
+    "pass_bar": 0.9
+  },
+  "caveats": [
+    "The working directory changes results. The same cases scored 9/10 in a nearly empty directory and 10/10 here.",
+    "A single 20-case run cannot resolve a 90% bar. Two boundary cases repeated five times each fired 40% and 80% of the time.",
+    "A sibling skill winning is scored as a failure for the skill under test, but is often the library behaving correctly.",
+    "Trigger accuracy says nothing about whether a skill's instructions are correct once loaded."
+  ],
+  "totals": {
+    "skills": 18,
+    "cases": 360,
+    "trigger": {
+      "fired": 144,
+      "cases": 180,
+      "rate": 0.8
+    },
+    "restraint": {
+      "correct": 180,
+      "cases": 180,
+      "rate": 1.0
+    },
+    "pass": 10,
+    "fail": 8
+  },
+  "skills": {
+    "aes-interop-kit": {
+      "trigger": {
+        "fired": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "PASS"
+    },
+    "approval-gate": {
+      "trigger": {
+        "fired": 9,
+        "cases": 10,
+        "rate": 0.9
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "PASS"
+    },
+    "config-doctor": {
+      "trigger": {
+        "fired": 9,
+        "cases": 10,
+        "rate": 0.9
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "PASS"
+    },
+    "fair-housing-check": {
+      "trigger": {
+        "fired": 3,
+        "cases": 10,
+        "rate": 0.3
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "FAIL"
+    },
+    "flutter-to-web-compass": {
+      "trigger": {
+        "fired": 9,
+        "cases": 10,
+        "rate": 0.9
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "PASS"
+    },
+    "go-live-checklist": {
+      "trigger": {
+        "fired": 8,
+        "cases": 10,
+        "rate": 0.8
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "FAIL"
+    },
+    "knowledge-intake": {
+      "trigger": {
+        "fired": 5,
+        "cases": 10,
+        "rate": 0.5
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "FAIL"
+    },
+    "learn-by-demo": {
+      "trigger": {
+        "fired": 9,
+        "cases": 10,
+        "rate": 0.9
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "PASS"
+    },
+    "line-agent-kit": {
+      "trigger": {
+        "fired": 9,
+        "cases": 10,
+        "rate": 0.9
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "PASS"
+    },
+    "listing-copy-drafter": {
+      "trigger": {
+        "fired": 5,
+        "cases": 10,
+        "rate": 0.5
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "FAIL"
+    },
+    "notify-hub": {
+      "trigger": {
+        "fired": 7,
+        "cases": 10,
+        "rate": 0.7
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "FAIL"
+    },
+    "secrets-hygiene-sweeper": {
+      "trigger": {
+        "fired": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "PASS"
+    },
+    "session-arbiter": {
+      "trigger": {
+        "fired": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "PASS"
+    },
+    "silent-runner": {
+      "trigger": {
+        "fired": 9,
+        "cases": 10,
+        "rate": 0.9
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "PASS"
+    },
+    "skill-eval-harness": {
+      "trigger": {
+        "fired": 8,
+        "cases": 10,
+        "rate": 0.8
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "FAIL"
+    },
+    "skill-lock": {
+      "trigger": {
+        "fired": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "PASS"
+    },
+    "sync-pipeline": {
+      "trigger": {
+        "fired": 8,
+        "cases": 10,
+        "rate": 0.8
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "FAIL"
+    },
+    "watchdog-kit": {
+      "trigger": {
+        "fired": 6,
+        "cases": 10,
+        "rate": 0.6
+      },
+      "restraint": {
+        "correct": 10,
+        "cases": 10,
+        "rate": 1.0
+      },
+      "verdict": "FAIL"
+    }
+  }
+}
