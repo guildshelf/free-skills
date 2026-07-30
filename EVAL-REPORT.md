@@ -148,6 +148,29 @@ because one case globbed first and loaded the skill afterwards. We report the lo
 reading because the published protocol asks whether the skill loaded, and we name
 the stricter number where it differs.
 
+## Follow-up: we fixed two mis-assigned cases. Neither score moved.
+
+Two of the four sibling-wins were genuine eval-set defects, so we rewrote them — one
+case each, nothing else touched.
+
+| Skill | Case rewritten | Before | After |
+|---|---|---|---|
+| `notify-hub` | `P07` was "Have my watchdog notify me when it restarts something" — a supervision prompt, and this skill's own description says it is not an uptime monitor. Now a two-channel dispatch prompt. | 7/10 | **7/10** |
+| `go-live-checklist` | `P07` was "Make sure no credentials are sitting in the repo" — that is a secrets scan and the sweeper was right to take it. Now exercises the `file` and `command` checks, which had no case at all. | 8/10 | **8/10** |
+
+In both, `P07` now fires and a *different* case flipped the other way — `P04` for
+notify-hub, `P10` for go-live-checklist. **Net zero, twice.**
+
+That is the variance we documented turning up exactly where we said it would: a
+one-case correction is invisible against ±1–2 cases of run-to-run noise. The
+corrections were still right to make — the cases were testing the wrong skill — but
+they are not an improvement and we are not presenting them as one.
+
+There is one honest cost. `go-live-checklist` still has a `no_secrets` check and now
+has no trigger case for it. That is the correct outcome rather than a gap to paper
+over: the check earns its place in a pre-launch run, while the *prompt* that reaches
+for it belongs to the sweeper.
+
 ## Follow-up: is the *name* the lever? No, not detectably.
 
 After two failed description rewrites we stopped rewriting and tested a different
