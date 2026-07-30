@@ -1,0 +1,43 @@
+name: "Request a skill (free)"
+description: "Tell us what is missing. Costs nothing, and it is how the roadmap gets decided."
+title: "Request: "
+labels: ["skill-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The library exists because someone had the problem first. If the skill you
+        need is not in it, this is the fastest way to change that.
+
+        We answer every request honestly, including "no, and here is why" — some
+        things should not be automated, and some belong to a platform's terms of
+        service rather than to us.
+
+        Requests that overlap with something already in the paid library get told
+        so plainly, with a pointer, rather than being quietly upvoted.
+  - type: input
+    id: what
+    attributes:
+      label: What should the skill do?
+      placeholder: "Diff two API schema versions and flag breaking changes before I ship a client."
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What do you do instead today?
+      description: "How often, and what it costs you when it goes wrong."
+    validations:
+      required: true
+  - type: dropdown
+    id: pay
+    attributes:
+      label: Would you pay for this specifically?
+      description: "An honest no is more useful to us than a polite yes."
+      options:
+        - "Yes, on its own"
+        - "Yes, as part of a subscription"
+        - "No, but I would use it if it were free"
+        - "Not sure"
+    validations:
+      required: true
