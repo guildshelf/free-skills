@@ -148,6 +148,29 @@ because one case globbed first and loaded the skill afterwards. We report the lo
 reading because the published protocol asks whether the skill loaded, and we name
 the stricter number where it differs.
 
+## Follow-up: is the *name* the lever? No, not detectably.
+
+After two failed description rewrites we stopped rewriting and tested a different
+variable. A copy of the whole 18-skill plugin was built with `listing-copy-drafter`
+renamed `listing-desk`, **description byte-identical** (verified before the run), and
+the same 20 cases replayed against the same competitive field.
+
+| | Trigger | Restraint |
+|---|---|---|
+| `listing-copy-drafter` | 5/10 | 10/10 |
+| `listing-desk` — name changed, description identical | 4/10 | 10/10 |
+
+A one-case difference is precisely the size our variance measurement calls noise, so
+**we are not claiming a shorter name is worse.** What 20 cases can rule out is a large
+effect, and there was none. Both cheap levers — wording and naming — are now tested
+and set aside.
+
+What is left, stated as untested: the prompts that fire reliably name a concrete
+artefact (`listing-facts.json`, `drafts/`). That points at the workflow rather than
+the package — start the user from a facts file that exists in their repo so their own
+prompts reference it. A trigger probe cannot test that, because it changes what a
+person types rather than how the model chooses. It is a recommendation, not a result.
+
 ## Reproduce it
 
 The runner and every case file ship inside the paid library. The five free skills
