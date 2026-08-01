@@ -3,14 +3,15 @@
   "owner": {
     "name": "Guildshelf"
   },
+  "description": "Guildshelf free skills — five Apache-2.0 agent skills for Claude Code, each shipped with its eval case set and published trigger numbers.",
   "metadata": {
     "pluginRoot": "./plugins"
   },
   "plugins": [
     {
       "name": "guildshelf-free",
-      "source": "guildshelf-free",
-      "description": "Guildshelf free funnel skills \u2014 Apache-2.0.",
+      "source": "./plugins/guildshelf-free",
+      "description": "Guildshelf free funnel skills — Apache-2.0.",
       "version": "0.1.0",
       "author": {
         "name": "Guildshelf"
